@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+.container{
+    background-color: slategrey;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px black;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+/*scores*/
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+.screen.active{
+    display: block;
+}
+/* start screen*/
+#start-btn{
+    border: 2px solid transparent;
+}
+#start-btn:hover{
+background-color: slategrey;
+border-color: white !important;
+}
+#start-screen p{
+    color: azure;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.quiz-header{
+    margin-bottom: 2rem;
+}
+#question-text{
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+.quiz-info{
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    margin-bottom: 10px;
+}
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.answer-btn{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid cornsilk;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease ;
+}
+.answer-btn:hover{
+    background-color: crimson !important;
+    border-color: black !important;
+}
+.answer-btn.correct{
+    background-color: yellowgreen;
+    border-color: aliceblue;
+    color: aquamarine;
+}
+.answer-btn.incorrect{
+    background-color: darkolivegreen;
+    border-color: aliceblue;
+    color: darkgreen;
+}
+.progress-bar{
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.progress{
+    height: 100%;
+    background-color: brown;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+/* result screen*/
+#result-screen h1{
+    color: orange;
+    margin-bottom: 30px;
+}
+.result-info{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.result-info p {
+    font-size: 1.2rem;
+    color: darkgrey;
+    margin-bottom: 1rem;
+}
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: goldenrod;
+}
+button{
+    background-color: brown;
+    color: aliceblue;
+    border: 0.5rem;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease ;
+}
+
+/*responsive design*/
+@media (max-width: 500px) {
+.screen{
+    padding: 1rem;
+}
+#start-screen h1{
+font-size: 2rem;
+}
+#question-text{
+    font-size: 1.3rem;
+}
+.answer-btn{
+    padding: 12px;
+}
+button{
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+}
